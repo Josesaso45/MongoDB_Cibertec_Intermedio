@@ -1,0 +1,18 @@
+{
+  "name": "mongodb-techstore",
+  "version": "1.0.0",
+  "description": "Script para ejecutar sentencias MongoDB para TechStore",
+  "main": "ejecutar_mongodb.js",
+  "scripts": {
+    "start": "node ejecutar_mongodb.js",
+    "t2:db": "node ejecutar_T2_mongodb.js",
+    "t2:p1": "node ejecutar_T2_pregunta1.js",
+    "t2:p2": "node ejecutar_T2_pregunta2.js",
+    "t2:p3": "node ejecutar_T2_pregunta3.js",
+    "t2:p4": "node ejecutar_T2_pregunta4.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "mongodb": "^6.21.0"
+  }
+}

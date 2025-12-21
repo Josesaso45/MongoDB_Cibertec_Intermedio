@@ -1,0 +1,11 @@
+// Crear la base de datos
+use('dbGastroManager')
+
+// Actualizar el precio de la limonada frozen
+db.menu.updateOne(
+    {nombre: "Limonada Frozen"}, // condición para la actualización
+    {se$t: { precio: 15 }} // nuevo valor actualizado
+)
+
+// Listar todos los documentos
+db.menu.find()

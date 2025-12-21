@@ -1,0 +1,9 @@
+// Crear base de datos
+use("dbStreamCloud")
+
+// Listar las series que tengan más de 4 temporadas
+// Se desea visualizar el título, el género y las vistas.
+db.catalogo.find(
+    { temporadas:{ $gt: 4 } }, // filtrado, operador $gt -> mayor que
+    { titulo: 1, genero: 1, vistas: 1, _id: 0 } // proyección
+).sort({vistas:-1}) // agregación: ordenamiento descendente -1

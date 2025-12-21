@@ -1,0 +1,10 @@
+// Crear la base de datos
+use('dbGastroManager')
+
+// Eliminar pedidos de estado Pagado
+db.pedidos.deleteMany(
+    {estado: "Pagado"}
+)
+
+// Listar los pedidos
+db.pedidos.find()

@@ -1,0 +1,11 @@
+// Crear la base de datos
+use('dbGastroManager')
+
+// Cambiar el estado de la mesa 2, de pendiente a servido
+db.pedidos.updateOne(
+    { mesa: 2 }, // condición es por la mesa 2 
+    { $set: { estado: "Servido" } } // actualizamos el dato del estado
+)
+
+// Listamos el documento de la mesa 2
+db.pedidos.find({mesa: 2})

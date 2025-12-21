@@ -1,0 +1,24 @@
+// Poner en uso la base de datos
+use("cell_store")
+
+// Actualizar documentos
+db.products.updateOne(
+    // Qué documento deseo actualizar
+    { _id: 1},
+    // Qué datos son los que se van a actualizar
+    {
+       $set: {name: "Vivo L80 Ultra"} 
+    }
+)
+
+db.products.updateOne({
+    _id: ObjectId("6927a5fe89805b904a5b3b4f")
+},
+{
+    $set: {name: "Samgun S25 Ultra"}
+})
+
+
+
+// Listar los documentos
+db.products.find()

@@ -1,0 +1,9 @@
+// Crear base de datos
+use("dbStreamCloud")
+
+// Finanzas quiere evaluar qué contenido retirar,
+// averigua que contenido tiene menos de 3000000.
+db.catalogo.find(
+    { vistas: { $lt: 3000000}}, // $lt lees than (menor que)
+    { _id: 0, titulo: 1, anio: 1, vistas: 1 }
+).sort({vistas: 1})

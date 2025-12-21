@@ -1,0 +1,8 @@
+// Crear la base de datos
+use('dbGastroManager')
+
+// Agregar "Sillao" a los ingredientes del "Lomo Saltado".
+db.menu.updateOne(
+    {nombre: "Lomo Saltado"}, // condición
+    {$push: {ingredientes: "Sillao"}} // nuevo valor a actualizar
+)
